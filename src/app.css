@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+
+.bc {
+    font-family: 'Barlow Condensed', 'Trebuchet MS', sans-serif;
+}
+
+.b {
+    font-family: 'Barlow', 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --navy: #001F5B;
+    --blue: #003580;
+    --mid: #0057A8;
+    --sky: #1E90FF;
+    --saffron: #FF6B35;
+    --gold: #F4A623;
+    --gray: #8795A1;
+    --dark: #0A0E1A;
+    --offwhite: #F5F7FA;
+}
+
+.card {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 53, 128, .15);
+}
+
+.btn {
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.hero-grid {
+    background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.seam-bg {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255, 255, 255, .015) 40px, rgba(255, 255, 255, .015) 80px);
+}
+
+.score-live {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--saffron);
+    transition: width .25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.tab-active {
+    border-bottom: 3px solid var(--saffron);
+    color: var(--saffron);
+}
+
+.tab-inactive {
+    border-bottom: 3px solid transparent;
+    color: #6B8CAE;
+}
+
+.tab-inactive:hover {
+    color: white;
+}
+
+.format-pill {
+    transition: all .2s ease;
+}
+
+.format-pill:hover {
+    transform: scale(1.03);
+}
