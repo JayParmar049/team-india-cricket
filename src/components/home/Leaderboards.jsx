@@ -6,7 +6,7 @@ import { LEADERBOARDS } from "../../data/cricketData";
 const Leaderboards = () => {
     return (
         <>
-            <section className="max-w-7xl mx-auto px-6 py-10">
+            <section className="max-w-7xl mx-auto px-6 py-10" id="leaderboards">
                 <div className="flex items-end justify-between mb-6">
                     <div className="bc font-black text-2xl text-gray-900 uppercase tracking-wide">2024 Leaderboards</div>
                     <a href="#" className="bc font-bold text-sm" style={{ color: "var(--blue)" }}>FULL STATS →</a>

@@ -13,6 +13,7 @@ function Squad() {
         <section
             style={{ background: "var(--navy)" }}
             className="py-12 seam-bg"
+             id="squad"
         >
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex items-end justify-between mb-6">

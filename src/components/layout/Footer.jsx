@@ -26,9 +26,22 @@ const Footer = () => {
             <div key={heading}>
               <div className="bc font-black text-xs tracking-widest mb-3" style={{ color: "var(--gold)" }}>{heading}</div>
               <div className="space-y-2">
-                {links.map(l => (
+
+                {/* {links.map(l => (
                   <a key={l} href="#" className="b block text-sm hover:text-white transition-colors" style={{ color: "var(--gray)" }}>{l}</a>
+                ))} */}
+
+                {links.map((l, i) => (
+                  <a
+                    key={typeof l === "object" ? l.name : i}
+                    href={typeof l === "object" ? `#${l.link}` : "#"}
+                    className="b block text-sm hover:text-white transition-colors"
+                    style={{ color: "var(--gray)" }}
+                  >
+                    {typeof l === "object" ? l.name : l}
+                  </a>
                 ))}
+                
               </div>
             </div>
           ))}

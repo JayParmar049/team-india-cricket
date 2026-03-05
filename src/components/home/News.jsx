@@ -5,7 +5,7 @@ import CricketBall from "../ui/CricketBall";
 const News = () => {
     return (
         <>
-            <section className="max-w-7xl mx-auto px-6 py-10">
+            <section className="max-w-7xl mx-auto px-6 py-10" id="news">
                 <div className="flex justify-between items-end mb-6">
                     <div className="bc font-black text-2xl text-gray-900 uppercase tracking-wide">News & Reports</div>
                     <a href="#" className="bc font-bold text-sm" style={{ color: "var(--blue)" }}>VIEW ALL →</a>

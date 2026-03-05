@@ -5,7 +5,7 @@ import { STATS_HIGHLIGHTS } from "../../data/cricketData";
 const QuickStats = () => {
     return (
         <>
-            <section style={{ background: "#F0F4FF" }} className="py-8">
+            <section style={{ background: "#F0F4FF" }} className="py-8" id="quickstats">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {STATS_HIGHLIGHTS.map((s, i) => (

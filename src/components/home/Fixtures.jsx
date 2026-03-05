@@ -4,7 +4,7 @@ import { FIXTURES } from "../../data/cricketData";
 const Fixtures = () => {
     return (
         <>
-            <section className="max-w-7xl mx-auto px-6 py-10">
+            <section className="max-w-7xl mx-auto px-6 py-10" id="fixtures">
                 <div className="flex justify-between items-end mb-6">
                     <div>
                         <div className="bc font-black text-2xl text-gray-900 uppercase tracking-wide">Latest Fixtures</div>

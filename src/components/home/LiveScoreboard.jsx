@@ -2,7 +2,7 @@ import React from "react";
 
 const LiveScoreboard = () => {
   return (
-    <div className="hidden lg:block w-80 flex-shrink-0">
+    <div className="hidden lg:block w-80 flex-shrink-0" id="LiveScoreboard">
       <div
         className="rounded-2xl overflow-hidden shadow-2xl border border-white/10"
         style={{

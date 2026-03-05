@@ -4,7 +4,7 @@ import CricketBall from "../ui/CricketBall";
 const AppDownload = () => {
   return (
     <div>
-        <section className="max-w-7xl mx-auto px-6 pb-10">
+        <section className="max-w-7xl mx-auto px-6 pb-10" id="AppDownload">
         <div className="rounded-3xl overflow-hidden relative"
           style={{ background: "linear-gradient(135deg,var(--navy) 0%,var(--blue) 60%,#0057A8 100%)", boxShadow: "0 25px 60px rgba(0,53,128,.35)" }}>
           <div className="absolute inset-0 hero-grid opacity-40" />
@@ -21,7 +21,8 @@ const AppDownload = () => {
             </svg>
           </div>
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 px-10 py-10">
-            <div className="flex-shrink-0">
+            {/* <div className="flex-shrink-0"> */}
+            <div className="shrink-0">
               <div className="w-32 h-56 rounded-3xl border-4 border-white/20 flex flex-col items-center justify-center shadow-2xl"
                 style={{ background: "rgba(0,0,0,.4)", backdropFilter: "blur(10px)" }}>
                 <div className="text-4xl">📱</div>

@@ -4,7 +4,7 @@ import { FORMATS } from "../../data/cricketData";
 const FormatRankings = () => {
     return (
         <>
-            <section className="bg-white border-b border-gray-100">
+            <section className="bg-white border-b border-gray-100" id="FormatRankings">
                 <div className="max-w-7xl mx-auto px-6 py-8">
                     <div className="grid grid-cols-3 gap-4">
                         {FORMATS.map(f => (

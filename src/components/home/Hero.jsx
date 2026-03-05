@@ -7,6 +7,7 @@ const Hero = () => {
     <section
       style={{ background: "var(--dark)", minHeight: 500 }}
       className="relative overflow-hidden hero-grid seam-bg"
+      id="home"
     >
       <div
         className="absolute right-0 top-0 bc font-black select-none pointer-events-none leading-none"

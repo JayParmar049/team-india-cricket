@@ -1,4 +1,29 @@
-export const NAV_LINKS = ["Home", "Squad", "Fixtures", "Stats", "News", "Contact"];
+// export const NAV_LINKS = [
+//   "Home",
+//   "Squad",
+//   "Fixtures",
+//   "Stats",
+//   "News",
+//   "Contact"
+// ];
+
+// export const NAV_LINKS = [
+//   { "name": "Home", "url": "https://www.bcci.tv/" },
+//   { "name": "Squad", "url": "https://www.bcci.tv/international/men/players" },
+//   { "name": "Fixtures", "url": "https://www.bcci.tv/international/men/fixtures-results" },
+//   { "name": "Stats", "url": "https://www.bcci.tv/international/men/stats/test" },
+//   { "name": "News", "url": "https://www.bcci.tv/international/men/news" },
+//   { "name": "Contact", "url": "mailto:office@bcci.tv" }
+// ];
+
+export const NAV_LINKS = [
+  { name: "Home", link: "home" },
+  { name: "Squad", link: "squad" },
+  { name: "Fixtures", link: "fixtures" },
+  { name: "Stats", link: "quickstats" },
+  { name: "News", link: "news" },
+  { name: "Contact", link: "mailto:office@bcci.tv" }
+];
 // const NAV_LINKS = ["https://www.bcci.tv/", "https://www.bcci.tv/international/men/players", "https://www.bcci.tv/international/men/fixtures-results", "https://www.bcci.tv/international/men/stats/test", "https://www.bcci.tv/international/men/news", "mailto:office@bcci.tv"];
 
 export const FIXTURES = [
@@ -8,13 +33,76 @@ export const FIXTURES = [
   { date: "7 Mar", team1: "India", flag1: "🇮🇳", score1: "—", team2: "South Africa", flag2: "🇿🇦", score2: "—", result: "Starts 09:30 IST", format: "ODI", venue: "Ahmedabad", status: "upcoming" },
 ];
 
+// export const SQUAD = [
+//   { name: "Rohit Sharma", role: "Batsman · Captain", jersey: 45, runs: 10709, avg: 48.7, flag: "🏏", form: ["50", "112", "34", "91", "8"] },
+//   { name: "Virat Kohli", role: "Batsman", jersey: 18, runs: 13906, avg: 58.1, flag: "🏏", form: ["186", "91", "12", "149", "55"] },
+//   { name: "Jasprit Bumrah", role: "Bowler", jersey: 93, wickets: 195, avg: 21.9, flag: "🎯", form: ["5/23", "2/41", "6/19", "3/55", "4/30"] },
+//   { name: "Shubman Gill", role: "Batsman · Opener", jersey: 77, runs: 2310, avg: 44.4, flag: "🏏", form: ["91", "33", "128", "44", "76"] },
+//   { name: "Ravindra Jadeja", role: "All-Rounder", jersey: 8, runs: 2633, avg: 36.0, flag: "⚡", form: ["75", "3/28", "112*", "2/44", "61"] },
+//   { name: "KL Rahul", role: "WK-Batsman", jersey: 1, runs: 4683, avg: 46.2, flag: "🧤", form: ["86", "12", "97", "43", "110"] },
+// ];
+
 export const SQUAD = [
-  { name: "Rohit Sharma", role: "Batsman · Captain", jersey: 45, runs: 10709, avg: 48.7, flag: "🏏", form: ["50","112","34","91","8"] },
-  { name: "Virat Kohli", role: "Batsman", jersey: 18, runs: 13906, avg: 58.1, flag: "🏏", form: ["186","91","12","149","55"] },
-  { name: "Jasprit Bumrah", role: "Bowler", jersey: 93, wickets: 195, avg: 21.9, flag: "🎯", form: ["5/23","2/41","6/19","3/55","4/30"] },
-  { name: "Shubman Gill", role: "Batsman · Opener", jersey: 77, runs: 2310, avg: 44.4, flag: "🏏", form: ["91","33","128","44","76"] },
-  { name: "Ravindra Jadeja", role: "All-Rounder", jersey: 8, runs: 2633, avg: 36.0, flag: "⚡", form: ["75","3/28","112*","2/44","61"] },
-  { name: "KL Rahul", role: "WK-Batsman", jersey: 1, runs: 4683, avg: 46.2, flag: "🧤", form: ["86","12","97","43","110"] },
+  {
+    name: "Rohit Sharma",
+    role: "Batsman · Captain",
+    category: "batting",
+    jersey: 45,
+    runs: 10709,
+    avg: 48.7,
+    flag: "🏏",
+    form: ["50", "112", "34", "91", "8"],
+  },
+  {
+    name: "Virat Kohli",
+    role: "Batsman",
+    category: "batting",
+    jersey: 18,
+    runs: 13906,
+    avg: 58.1,
+    flag: "🏏",
+    form: ["186", "91", "12", "149", "55"],
+  },
+  {
+    name: "Shubman Gill",
+    role: "Batsman · Opener",
+    category: "batting",
+    jersey: 77,
+    runs: 2310,
+    avg: 44.4,
+    flag: "🏏",
+    form: ["91", "33", "128", "44", "76"],
+  },
+  {
+    name: "Jasprit Bumrah",
+    role: "Bowler",
+    category: "bowling",
+    jersey: 93,
+    wickets: 195,
+    avg: 21.9,
+    flag: "🎯",
+    form: ["5/23", "2/41", "6/19", "3/55", "4/30"],
+  },
+  {
+    name: "Ravindra Jadeja",
+    role: "All-Rounder",
+    category: "all-rounders",
+    jersey: 8,
+    runs: 2633,
+    avg: 36.0,
+    flag: "⚡",
+    form: ["75", "3/28", "112*", "2/44", "61"],
+  },
+  {
+    name: "KL Rahul",
+    role: "WK-Batsman",
+    category: "batting",
+    jersey: 1,
+    runs: 4683,
+    avg: 46.2,
+    flag: "🧤",
+    form: ["86", "12", "97", "43", "110"],
+  },
 ];
 
 export const LEADERBOARDS = [
