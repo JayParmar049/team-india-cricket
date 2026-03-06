@@ -1,5 +1,5 @@
 import React from 'react'
-import { NAV_LINKS } from "../../data/cricketData";
+import { NAV_LINKS_2, FORMATS_LINKS } from "../../data/cricketData";
 import { StumpIcon } from "../ui/StumpIcon";
 
 const Footer = () => {
@@ -19,33 +19,40 @@ const Footer = () => {
             </p>
           </div>
           {[
-            ["QUICK LINKS", NAV_LINKS],
-            ["FORMATS", ["Test Cricket", "One Day Intl.", "T20 Internationals", "IPL", "Domestic"]],
+            ["QUICK LINKS", NAV_LINKS_2],
+            ["FORMATS", FORMATS_LINKS],
             ["ABOUT", ["BCCI", "Selector Panel", "Coaching Staff", "Media Centre", "Careers"]],
           ].map(([heading, links]) => (
             <div key={heading}>
               <div className="bc font-black text-xs tracking-widest mb-3" style={{ color: "var(--gold)" }}>{heading}</div>
               <div className="space-y-2">
+                {links.map((l, i) => {
+                  const name = typeof l === "object" ? l.name : l;
+                  const link = typeof l === "object" ? l.link : "#";
 
-                {/* {links.map(l => (
-                  <a key={l} href="#" className="b block text-sm hover:text-white transition-colors" style={{ color: "var(--gray)" }}>{l}</a>
-                ))} */}
+                  const isExternal = link.startsWith("http") || link.startsWith("mailto");
 
-                {links.map((l, i) => (
-                  <a
-                    key={typeof l === "object" ? l.name : i}
-                    href={typeof l === "object" ? `#${l.link}` : "#"}
-                    className="b block text-sm hover:text-white transition-colors"
-                    style={{ color: "var(--gray)" }}
-                  >
-                    {typeof l === "object" ? l.name : l}
-                  </a>
-                ))}
-                
+                  return (
+                    <a
+                      key={name}
+                      href={isExternal ? link : `#${link}`}
+                      target={isExternal ? "_blank" : "_self"}
+                      rel={isExternal ? "noopener noreferrer" : ""}
+                      className="b block text-sm hover:text-white transition-colors"
+                      style={{ color: "var(--gray)" }}
+                    >
+                      {name}
+                    </a>
+                  );
+                })}
+
               </div>
+
             </div>
+
           ))}
         </div>
+
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="b text-xs" style={{ color: "var(--gray)" }}>© 2024 BCCI. All rights reserved. 🇮🇳 Jai Hind</div>
           <div className="flex gap-3">
@@ -55,14 +62,19 @@ const Footer = () => {
               </button>
             ))}
           </div>
+
         </div>
+
       </div>
+
       <div className="flex h-1">
         <div className="flex-1" style={{ background: "#FF9933" }} />
         <div className="flex-1 bg-white" />
         <div className="flex-1" style={{ background: "#138808" }} />
       </div>
+
     </footer>
+
   )
 }
 
